@@ -31,4 +31,10 @@ public class RestaurantService {
     public List<Restaurant> getRestaurants() {
         return restaurants;
     }
+
+    public int calculate_sum_of_items(List<String> item_name_list, Restaurant restaurant_object){
+        int total =0;
+        return total;
+
+    }
 }

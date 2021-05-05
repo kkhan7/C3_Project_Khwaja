@@ -66,4 +66,23 @@ class RestaurantServiceTest {
     }
     //<<<<<<<<<<<<<<<<<<<<ADMIN: ADDING & REMOVING RESTAURANTS>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+    @Test
+    public void calculate_total_cost_should_return_sum_amount_as_per_item_names(){
+
+        restaurant.addToMenu("Hot Chocolates",145);
+        restaurant.addToMenu("Veg Pulav", 261);
+        restaurant.addToMenu("Chocolate Milkshake",69);
+        restaurant.addToMenu("Vanilla Milkshake", 225);
+
+        List<String> item_list = new ArrayList<>();
+        item_list.add("Corn soup");
+        item_list.add("Hot Chocolates");
+        item_list.add("Chocolate Milkshake");
+        item_list.add("Vanilla Milkshake");
+        item_list.add("Spicy soup");
+
+        assertEquals(700, service.calculate_sum_of_items(item_list, restaurant));
+
+    }
+
 }
