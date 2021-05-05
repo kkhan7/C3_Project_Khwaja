@@ -75,11 +75,10 @@ class RestaurantServiceTest {
         restaurant.addToMenu("Vanilla Milkshake", 225);
 
         List<String> item_list = new ArrayList<>();
-        item_list.add("Corn soup");
         item_list.add("Hot Chocolates");
         item_list.add("Chocolate Milkshake");
         item_list.add("Vanilla Milkshake");
-        item_list.add("Spicy soup");
+        item_list.add("Veg Pulav");
 
         assertEquals(700, service.calculate_sum_of_items(item_list, restaurant));
 
